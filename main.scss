@@ -14,14 +14,58 @@ body {
     font-size: 1.125rem;
     margin: 0;
     padding: 0;
+    position: relative;
 
     .container {
         align-items: center;
-        background-color: $dark-cyan;
+        background: $dark-cyan;
         display: flex;
         justify-content: center;
         height: 100vh;
+        overflow: hidden;
+        position: relative;
         width: 100%;
+        z-index: 1;
+
+        .bg-top-left {
+            background: url(images/bg-pattern-top.svg) no-repeat center;
+            background-size: contain;
+            height: 100%;
+            max-height: 978px;
+            position: absolute;
+            left: -40%;
+            top: -50%;
+            width: 100%;
+            z-index: 3;
+            
+            @media (min-width: 1280px) {
+                background-size: cover;
+                height: 978px;
+                width: 978px;
+                left: -15%;
+                top: -50%;
+            }
+        }
+
+        .bg-bottom-right {
+            background: url(images/bg-pattern-bottom.svg) no-repeat center;
+            background-size: contain;
+            height: 100%;
+            max-height: 978px;
+            position: absolute;
+            right: -45%;
+            bottom: -40%;
+            width: 100%;
+            z-index: 3;
+            
+            @media (min-width: 1280px) {
+                background-size: cover;
+                height: 978px;
+                width: 978px;
+                right: -15%;
+                bottom: -50%;
+            }
+        }
 
         .card {
             align-items: flex-end;
@@ -31,8 +75,14 @@ body {
             display: flex;
             flex-wrap: wrap;
             min-height: 375px;
-            width: 350px;
+            position: relative;
+            width: 326px;
             text-align: center;
+            z-index: 5;
+
+            @media (min-width: 1280px) {
+                width: 350px;
+            }
 
             &__inner {
                 background-color: $white;
@@ -100,6 +150,29 @@ body {
                         }
                     }
                 }
+            }
+        }
+    }
+
+    .attribution {
+        bottom: 0;
+        color: $black-blue;
+        display: block;
+        font-size: .75rem;
+        left: 0;
+        margin: 0 auto;
+        padding: 1rem 1.5rem;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        width: 100%;
+        z-index: 5;
+
+        a {
+            color: $black-blue;
+
+            &:hover {
+                text-decoration: none;
             }
         }
     }
