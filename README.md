@@ -26,7 +26,7 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [frontendmentor.io/solutions/sassy-profile-card-component-sLU1xy8s1X](https://www.frontendmentor.io/solutions/sassy-profile-card-component-sLU1xy8s1X)
 - Live Site URL: [ntjnh-fem-profile-card.netlify.app](https://ntjnh-fem-profile-card.netlify.app/)
 
 ## My process
