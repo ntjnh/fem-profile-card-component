@@ -3,8 +3,104 @@ $dark-cyan: hsl(185, 75%, 39%);
 $black-blue: hsl(229, 23%, 23%);
 $grey-blue: hsl(227, 10%, 46%);
 $grey-dark: hsl(0, 0%, 59%);
+$white: #fff;
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Kumbh Sans', sans-serif;
     font-size: 1.125rem;
+    margin: 0;
+    padding: 0;
+
+    .container {
+        align-items: center;
+        background-color: $dark-cyan;
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+
+        .card {
+            align-items: flex-end;
+            background: #2DC0C3 url('images/bg-pattern-card.svg') no-repeat center top;
+            border-radius: 16px;
+            color: $black-blue;
+            display: flex;
+            flex-wrap: wrap;
+            min-height: 375px;
+            width: 350px;
+            text-align: center;
+
+            &__inner {
+                background-color: $white;
+                border-bottom-left-radius: 16px;
+                border-bottom-right-radius: 16px;
+                width: 100%;
+                
+                .bio {
+                    padding: 4.5rem 1.75rem 1.5rem;
+                    position: relative;
+                    
+                    .photo {
+                        border: 8px solid $white;
+                        border-radius: 50%;
+                        box-sizing: content-box;
+                        display: block;
+                        left: 0;
+                        right: 0;
+                        margin: 0 auto;
+                        position: absolute;
+                        top: -3.25rem;
+                        height: 96px;
+                        width: 96px;
+                    }
+    
+                    .name {
+                        font-size: 1.125rem;
+                        margin: 0 0 .5rem;
+    
+                        .age {
+                            color: $grey-dark;
+                            font-weight: 400;
+                            display: inline-block;
+                            margin-left: .375rem;
+                        }
+                    }
+    
+                    .city {
+                        color: $grey-dark;
+                        font-size: .875rem;
+                        margin: 0;
+                    }
+                }
+    
+                .stats {
+                    align-items: center;
+                    border-top: 1px solid rgba($grey-dark, .3);
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    padding: 1.325rem 3rem;
+    
+                    .stat {
+                        .number {
+                            font-size: 1.125rem;
+                            margin: 0 0 .625rem;
+                        }
+
+                        .label {
+                            color: $grey-dark;
+                            font-size: .625rem;
+                            font-weight: 400;
+                            letter-spacing: .175em;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
