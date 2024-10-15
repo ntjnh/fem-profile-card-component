@@ -19,7 +19,7 @@
   "homepage": "https://github.com/ntjnh/fem-profile-card-component#readme",
   "devDependencies": {
     "browser-sync": "^3.0.3",
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-sass": "^5.1.0",
     "sass": "^1.60.0"
